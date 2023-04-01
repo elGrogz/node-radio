@@ -18,3 +18,5 @@ class View {
     this._screen.render();
   }
 }
+
+module.exports = View;
