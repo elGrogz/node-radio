@@ -13,13 +13,10 @@ const nowPlaying = new NowPlaying({
   config: Configs.nowPlayingConfig,
   childConfig: Configs.nowPlayingChildConfig,
 });
-nowPlaying._createBoxChild("hello");
+nowPlaying.createBoxChildAndAppend("hello");
 
 // Attach the components to the main view
-view.appendBoxes([
-  controls.box,
-  // nowPlaying.box
-]);
+view.appendBoxes([controls.box, nowPlaying.box]);
 
 // render the view when the programme runs
 view.render();
