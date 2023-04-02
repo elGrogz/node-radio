@@ -1,3 +1,5 @@
+// main component for the terminal tool.
+// It sets its screen, gives it a title, adds an escape key to stop the process
 const blessed = require("neo-blessed");
 
 class View {
@@ -8,12 +10,14 @@ class View {
     this._screen = screen;
   }
 
+  // run in the index to add all the boxes to this main view component
   appendBoxes(boxes) {
     for (const box of boxes) {
       this._screen.append(box);
     }
   }
 
+  // the neoblessed method to render the screen in the terminal
   render() {
     this._screen.render();
   }

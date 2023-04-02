@@ -1,3 +1,4 @@
+// set the keyboard keys for use with actions
 exports.keys = {
   SCROLL_UP: process.env.SCROLL_UP || "i",
   SCROLL_DOWN: process.env.SCROLL_DOWN || "k",

@@ -1,4 +1,4 @@
-const blessed = require("neo-blessed");
+// Box to show which controls are required depending on the other components displayed
 const Terminal = require("./terminalBox");
 const { keys } = require("./keys");
 

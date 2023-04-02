@@ -1,3 +1,4 @@
+// neoblessed component styling
 const Configs = {
   controlsConfig: {
     label: "Controls",

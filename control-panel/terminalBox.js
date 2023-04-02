@@ -1,3 +1,4 @@
+// parent class (will be abstract and never initialised by itself) to give each component it's own box
 const blessed = require("neo-blessed");
 
 class TerminalBox {
