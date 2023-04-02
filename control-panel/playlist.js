@@ -1,7 +1,31 @@
+const blessed = require("neo-blessed");
 const TerminalItemBox = require("./terminalItemBox");
 const { keys } = require("./keys");
 
 class Playlist extends TerminalItemBox {
+  _createBoxChild(content) {
+    console.log("making child boxes: ", content);
+    return blessed.box({
+      ...this._childConfig,
+      top: this.box.children.length - 1,
+      content: content,
+    });
+  }
+
+  fillWithItems(items) {
+    console.log("filling with songs lol");
+    for (const item of items) {
+      console.log("song: ", item);
+      this.createBoxChildAndAppend(item);
+      console.log("appended", this.box.children.length);
+    }
+    this.focus();
+  }
+
+  getFocusedSong() {
+    return this.box.children[this._focusIndexer.get()];
+  }
+
   _circleChildrenUp() {
     const temp = this.box.children[this.box.children.length - 1].content;
     this.box.children.reduceRight((lowerChild, upperChild) => {

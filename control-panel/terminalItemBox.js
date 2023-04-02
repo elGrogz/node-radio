@@ -36,13 +36,13 @@ class TerminalItemBox extends TerminalBox {
   }
 
   focus() {
-    // when focussing a child box, set the styling to the focus style that's set when creating the terminal item box class
+    // when focussing a box, set the styling to the focus style that's set when creating the terminal item box class
     this._setActiveChildColor(this._bgFocus);
     this.box.focus();
   }
 
   blur() {
-    // when blurring a child box, set the styling to the blur style that's set when creating the terminal item box class
+    // when blurring a box, set the styling to the blur style that's set when creating the terminal item box class
     this._setActiveChildColor(this._bgBlur);
   }
 
@@ -74,6 +74,7 @@ class TerminalItemBox extends TerminalBox {
   createBoxChildAndAppend(content) {
     const boxChild = this._createBoxChild(content);
     this.box.append(boxChild);
+    console.log("appended", this.box.children.length);
   }
 }
 

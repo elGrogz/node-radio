@@ -12,8 +12,10 @@ class View {
 
   // run in the index to add all the boxes to this main view component
   appendBoxes(boxes) {
+    console.log("appending boxes");
     for (const box of boxes) {
       this._screen.append(box);
+      console.log("box length: ", this._screen.children.length);
     }
   }
 

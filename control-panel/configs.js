@@ -1,49 +1,102 @@
-// neoblessed component styling
 const commonConfig = {
   border: { type: "line" },
 };
 
-const commonChildConfig = {
-  width: "100%",
+const childCommonConfig = {
+  width: "50%",
   height: 1,
-  left: 0,
+  // left: 0,
 };
 
 const Configs = {
-  controlsConfig: {
-    ...commonConfig,
-    label: "Controls",
-    top: "85%",
-    left: "50%",
-    width: "50%",
-    height: 5,
-    style: {
-      fg: "black",
-      bg: "green",
-      border: {
-        fg: "#000100",
+  playlist: {
+    bgFocus: "black",
+    bgBlur: "green",
+    config: {
+      ...commonConfig,
+      // top: 0,
+      // left: 0,
+      width: "50%",
+      height: "50%",
+      scrollable: true,
+      label: "Playlist",
+      style: {
+        fg: "white",
+        bg: "green",
+        border: {
+          fg: "#f0f0f0",
+        },
       },
     },
-  },
-  nowPlayingConfig: {
-    ...commonConfig,
-    label: "Controls",
-    top: "50%",
-    left: "50%",
-    width: "50%",
-    height: 5,
-    style: {
-      fg: "black",
+    childConfig: {
+      ...childCommonConfig,
+      fg: "white",
       bg: "green",
-      border: {
-        fg: "#000100",
-      },
     },
   },
-  nowPlayingChildConfig: {
-    ...commonChildConfig,
-    fg: "green",
-    bg: "black",
+  queue: {
+    bgFocus: "black",
+    bgBlur: "blue",
+    config: {
+      // ...commonConfig,
+      // top: 0,
+      // left: "50%",
+      // width: "50%",
+      // height: "70%",
+      // scrollable: true,
+      // label: "Queue",
+      // style: {
+      //   fg: "white",
+      //   bg: "blue",
+      //   border: {
+      //     fg: "#f0f0f0",
+      //   },
+      // },
+    },
+    childConfig: {
+      ...childCommonConfig,
+      fg: "white",
+      bg: "blue",
+    },
+  },
+  nowPlaying: {
+    config: {
+      // ...commonConfig,
+      // top: "70%",
+      // left: "50%",
+      // width: "50%",
+      // height: 3,
+      // label: "Now Playing",
+      // style: {
+      //   fg: "white",
+      //   bg: "black",
+      //   border: {
+      //     fg: "#f0f0f0",
+      //   },
+    },
+    childConfig: {
+      ...childCommonConfig,
+      fg: "green",
+      bg: "black",
+    },
+  },
+  controls: {
+    config: {
+      ...commonConfig,
+      // top: "85%",
+      left: "50%",
+      width: "50%",
+      height: 5,
+      scrollable: true,
+      label: "Controls",
+      style: {
+        fg: "grey",
+        bg: "black",
+        border: {
+          fg: "#000000",
+        },
+      },
+    },
   },
 };
 
