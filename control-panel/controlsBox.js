@@ -1,8 +1,8 @@
 // Box to show which controls are required depending on the other components displayed
-const Terminal = require("./terminalBox");
+const TerminalBox = require("./terminalBox");
 const { keys } = require("./keys");
 
-class Controls extends Terminal {
+class Controls extends TerminalBox {
   constructor(config) {
     super(config);
     this.setPlaylistTips();

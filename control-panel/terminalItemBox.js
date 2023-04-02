@@ -76,3 +76,5 @@ class TerminalItemBox extends TerminalBox {
     this.box.append(boxChild);
   }
 }
+
+module.exports = TerminalItemBox;
