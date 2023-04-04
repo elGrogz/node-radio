@@ -1,12 +1,12 @@
 const http = require("http");
-const url = require("url");
+const player = require("./player");
 
 const server = http.createServer((request, response) => {
-  const reqUrl = url.parse(request.url).pathname;
-  if (reqUrl === "/play") {
-    const { id, responseSink } = queue.makeResponseSink();
-    request.app.sinkId = id;
-    return h.response(responseSink).type("audio/mpeg");
+  if (request.method === "GET" && request.url === "/play") {
+    console.log("got /play request!");
+    // const { id, responseSink } = player.makeResponseSink();
+    // request.app.sinkId = id;
+    // return h.response(responseSink).type("audio/mpeg");
   }
 });
 
